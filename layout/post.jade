@@ -3,7 +3,7 @@ extends base
 prepend window_title
   
   = page.title
-  &mdash;
+
 
 append content
   article(class=page.layout)
@@ -16,5 +16,9 @@ append content
       +category(page.categories)
     
     != page.content
+    p
+      != markdown(page.rumor)
+    p
+      != markdown(page.validated)
 
   include _partial/article_pagination
